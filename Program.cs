@@ -5,7 +5,7 @@ int GetNumberFromConsole(string text)
     Console.WriteLine(text);
     return Convert.ToInt32(Console.ReadLine());
 }
-double GetRandomValue(int minValue, int maxValue)
+double GetDoubleRandomValue(int minValue, int maxValue)
 {
     return new Random().Next(minValue, maxValue + 1)+ new Random().NextDouble();
 }
@@ -15,7 +15,7 @@ void FillArray(double[,] arr, int minValue, int maxValue)
     {
         for(int j = 0; j < arr.GetLength(1); j++)
         {
-            arr[i,j] = GetRandomValue(minValue,maxValue);
+            arr[i,j] = GetDoubleRandomValue(minValue,maxValue);
         }
     }
 }
